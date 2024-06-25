@@ -9,12 +9,12 @@
 
     font-family: "Overpass", sans-serif;
     /* color: white; */
-}
-
-body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
     background-color: var(--VeryDarkBlue);
     height: 100vh;
 
@@ -52,6 +52,7 @@ p, .rating-btn {
 }
 
 #rating-state {
+    /* background-color: yellow; */
     display: flex;
     flex-direction: column;
 }
