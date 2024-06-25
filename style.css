@@ -5,18 +5,95 @@
     --DarkBlue: hsl(213, 19%, 18%);
     --VeryDarkBlue: hsl(216, 12%, 8%);
     --attribution: hsl(228, 45%, 44%);
+    --buttons: rgba(0, 51, 102);
 
     font-family: "Overpass", sans-serif;
+    /* color: white; */
 }
 
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: var(--VeryDarkBlue);
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    background-color: aqua;
+    background-color: var(--DarkBlue);
+    width: 25%;
+    padding: 2rem;
+    border-radius: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.icon-star {
+    width: 1.5rem;
+    border: solid;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: var(--White);
+}
+
+h2 {
+    color: var(--White);
+}
+
+p, .rating-btn {
+    color: var(--LightGrey);
+}
+
+#rating-state {
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.rating-btn {
+    border-radius: 50%;
+    border: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: darkcyan;
+    /* opacity: 0.5; */
+    cursor: pointer;
+}
+
+/* "focus" keeps the button the color Orange when the user clicks on it */
+.rating-btn:hover {
+    background-color: var(--White);
+}
+
+
+.rating-btn:focus {
+    background-color: var(--Orange);
+    color: black;
+}
+
+#submit-btn {
+    background-color: var(--Orange);
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#submit-btn:hover {
+    background-color: var(--White);
 }
 
 .attribution {
