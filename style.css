@@ -1,23 +1,30 @@
-* {
+/* :root selector for defining custom properties */
+:root {
     --Orange: hsl(25, 97%, 53%);
     --White: hsl(0, 0%, 100%);
     --LightGrey: hsl(217, 12%, 63%);
     --DarkBlue: hsl(213, 19%, 18%);
+    --DarkGray: hsl(220, 19%, 22%);
     --VeryDarkBlue: hsl(216, 12%, 8%);
     --attribution: hsl(228, 45%, 44%);
     --buttons: rgba(0, 51, 102);
+}
 
-    font-family: "Overpass", sans-serif;
-    /* color: white; */
+/* Universal selector for global reset */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+    line-height: 1.5;
+}
+
+html, body {
+    height: 100vh;
 }
 
 body {
     background-color: var(--VeryDarkBlue);
-    height: 100vh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,9 +33,12 @@ body {
 
 .container {
     background-color: var(--DarkBlue);
-    width: 25%;
+    width: 25rem;
+    height: 25rem;
     padding: 2rem;
     border-radius: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .hidden {
@@ -36,31 +46,29 @@ body {
 }
 
 .icon-star {
-    width: 1.5rem;
-    border: solid;
+    background-color: var(--DarkGray);
     border-radius: 50%;
-    padding: 10px;
-    background-color: var(--White);
+    padding: 12px;
 }
 
 h2 {
     color: var(--White);
+    margin: 8px 0;
 }
 
 p, .rating-btn {
     color: var(--LightGrey);
 }
 
-#rating-state {
-    /* background-color: yellow; */
+/* .rating-state {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .rating-buttons {
     display: flex;
     justify-content: space-between;
-    margin: 2rem 0;
+    margin: 25px 0;
 }
 
 .rating-btn {
@@ -68,16 +76,15 @@ p, .rating-btn {
     border: none;
     width: 3.5rem;
     height: 3.5rem;
-    background-color: darkcyan;
-    /* opacity: 0.5; */
+    background-color: var(--DarkGray);
     cursor: pointer;
 }
 
 /* "focus" keeps the button the color Orange when the user clicks on it */
 .rating-btn:hover {
     background-color: var(--White);
+    color: black;
 }
-
 
 .rating-btn:focus {
     background-color: var(--Orange);
@@ -91,17 +98,38 @@ p, .rating-btn {
     padding: 12px;
     font-weight: 600;
     letter-spacing: 2px;
+    width: 100%;
+    cursor: pointer;
 }
 
 #submit-btn:hover {
     background-color: var(--White);
 }
 
+.thank-you {
+    text-align: center;
+}
+
+.selection {
+    color: var(--Orange);
+    background-color: var(--DarkGray);
+    border: none;
+    border-radius: 25px;
+    padding: 6px;
+    margin: 30px 50px;
+}
+
 .attribution {
     font-size: 12px;
-    text-align: center;
+    color: white;
+    margin-top: 25px;
 }
 
 .attribution a {
     color: var(--attribution);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
 }

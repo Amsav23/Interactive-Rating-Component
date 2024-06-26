@@ -1,5 +1,5 @@
 /* Create references to elements that I will use */
-const ratingState = document.getElementById("rating-state");
+const ratingState = document.getElementById("rating-state-id");
 const thankYouState = document.getElementById("thank-you-state");
 const ratingButtons = document.querySelectorAll(".rating-btn");
 console.log(ratingButtons)
@@ -12,20 +12,20 @@ submitButton.addEventListener("click", () => {
     if (selectedRating !="") {
             // I want to show the thank-you-state div
             // That means REMOVE the hidden class
-            thankYouState.classList.toggle("hidden")
+            thankYouState.classList.toggle("hidden");
             // I need the rating-state div to be hidden
-            ratingState.classList.add("hidden")
+            ratingState.classList.add("hidden");
 }
-})
+});
 
 ratingButtons.forEach(button => {
     button.addEventListener("click", () => {
-        console.log("click")
+        console.log("click");
         // save the button text
         selectedRating = button.textContent;
-        console.log(selectedRating)
+        console.log(selectedRating);
     })
-})
+});
 //
 /*
 document.addEventListener("DOMContentLoaded", () => {
