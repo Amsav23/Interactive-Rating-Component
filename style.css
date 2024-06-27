@@ -82,12 +82,12 @@ p, .rating-btn {
 
 /* "focus" keeps the button the color Orange when the user clicks on it */
 .rating-btn:hover {
-    background-color: var(--White);
+    background-color: var(--Orange);
     color: black;
 }
 
 .rating-btn:focus {
-    background-color: var(--Orange);
+    background-color: var(--White);
     color: black;
 }
 
