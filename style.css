@@ -56,14 +56,10 @@ h2 {
     margin: 8px 0;
 }
 
+/* Rating state section */
 p, .rating-btn {
     color: var(--LightGrey);
 }
-
-/* .rating-state {
-    display: flex;
-    flex-direction: column;
-} */
 
 .rating-buttons {
     display: flex;
@@ -80,12 +76,13 @@ p, .rating-btn {
     cursor: pointer;
 }
 
-/* "focus" keeps the button the color Orange when the user clicks on it */
+/* "hover" keeps the button Orange when the user hovers over it */
 .rating-btn:hover {
     background-color: var(--Orange);
     color: black;
 }
 
+/* "focus" keeps the button White when the user clicks on it */
 .rating-btn:focus {
     background-color: var(--White);
     color: black;
@@ -106,6 +103,7 @@ p, .rating-btn {
     background-color: var(--White);
 }
 
+/* Thank you state section */
 .thank-you {
     text-align: center;
 }
@@ -119,6 +117,7 @@ p, .rating-btn {
     margin: 30px 50px;
 }
 
+/* Attribution section */
 .attribution {
     font-size: 12px;
     color: white;
@@ -132,4 +131,29 @@ p, .rating-btn {
 
 .attribution a:hover {
     text-decoration: underline;
+}
+
+/* Media Queries */
+@media screen and (max-width: 426px) {
+    .container {
+        width: 90%;
+    }
+
+    .rating-state {
+        width: 100%;
+    }
+
+    .rating-btn {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .selection {
+        margin: 20px 0;
+    }
+
+    .attribution {
+        width: 75%;
+        text-align: center;
+    }
 }
