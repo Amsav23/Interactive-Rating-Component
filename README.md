@@ -1,94 +1,162 @@
-# Frontend Mentor - Interactive rating component
+# Frontend Mentor - Interactive rating component solution
 
-![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Code that I'm Proud of](#code-that-im-proud-of)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this interactive rating component and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Select and submit a number rating
 - See the "Thank you" card state after submitting a rating
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+Desktop View
+![](./images/Desktop-Screenshot-RatingState.png)
+![](./images/Desktop-Screenshot-ThankYouState.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+### Links
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+## My process
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### Built with
 
-## Building your project
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Desktop-first workflow
+- JavaScript
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+### What I learned
 
-## Deploying your project
+In this project, I learned more about JavaScript functions, like event listeners, the use of `hidden`, `document.querySelectorAll`, using `let` variables, conditions that use `(variable != "")`, and expanding on the importance of using the console to debug my code, as well as make sure it's connected properly.
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+- Event listeners are important for when you want something to happen when a user does something, like "click" a button, or for other events that occur in the browser. I should then trigger a callback function when those events happen.
+`element.addEventListener(event, callback);`
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- The `hidden` class is not a built-in feature of HTML or CSS but is often used as a convention to control the visibility of elements. You define this class in your CSS and then add or remove it as needed.
+```css
+.hidden {
+    display: none;
+}
+```
+- In this CSS definition, any element with the hidden class will be hidden (display: none;), meaning it will not be visible on the page and will not take up any space.
+```css
+<div id="myElement" class="hidden">This element is hidden</div>
+```
+- The `div` with `id="myElement"` will not be visible because it has the `hidden` class.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+- Selectors are a string containing one or more CSS selectors separated by commas. These selectors are used to match elements in the document. Unlike `document.querySelector`, which returns the first matching element, `querySelectorAll` returns all matching elements.
 
-## Create a custom `README.md`
+- If `let` variables are declared outside of any function or block, they are globally scoped. If they are inside of a function, they are only accessible within the block (enclosed by curly braces {}) where they are defined.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+- I explained what I learned about `(variable != "")` I think further down in my README file.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+- It's very important to console log throughout your project, each step of the way. If you don't, you're basically coding blindly. I have to remind myself to ask myself, "how do I know what's going on or if the project is working if I'm not verifying each step of the way in the console?". There is no way to know if I don't use the console, I'd just be guessing, which isn't smart to do.
+- Logging helps identify where and why things are going wrong. By logging variable values, function outputs, or error messages, you can pinpoint the source of the issues quicker. 
+- When writing tests, logging can help validate that your functions produce the expected outputs under different conditions or inputs.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
 
-## Submitting your solution
+### Code that I'm Proud of
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+```html
+<button id="submit-btn">SUBMIT</button>
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+<div id="thank-you-state" class="thank-you hidden">
 
-## Sharing your solution
+<p class="selection">You selected <span id="rating-value"></span> out of 5</p>
+```
+```css
+/* Figuring out when to use a root selector, * selector, body selector, and container selector */
+/* :root selector for defining custom properties */
+/* * = Universal selector for global reset */
 
-There are multiple places you can share your solution:
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+    line-height: 1.5;
+}
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+.hidden {
+    display: none;
+}
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+/* "focus" keeps the button White when the user clicks on it */
+.rating-btn:focus {
+    background-color: var(--White);
+    color: black;
+}
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+#submit-btn:hover {
+    background-color: var(--White);
+}
+```
+```js
+/* Create references to elements that I will use */
+// I created `ratingState` and `thankYouState` so that I can hide or show these elements based on user actions
 
-## Got feedback for us?
+// `ratingButtons` is a NodeList (similar to an array) of all elements with the class `rating-btn`
+const ratingButtons = document.querySelectorAll(".rating-btn");
+// The console helps with debugging by showing all the elements that were selected
+console.log(ratingButtons)
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+// Used to STORE and UPDATE the selected rating value
+let selectedRating = "";
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+// if `selectedRating` is NOT an empty string, it means a rating has been selected, and the code inside the if block will be executed.
+// If `selectedRating` IS EMPTY, meaning no rating has been selected, the code inside the ELSE block will be executed.
+if (selectedRating !="") {
+  thankYouState.classList.toggle("hidden");
+  ratingState.classList.add("hidden");
+} else {
+  alert("Please select a rating before submitting.");
+}
 
-**Have fun building!** 🚀
+// This updates the span text content with the selected rating
+ratingValueSpan.textContent = selectedRating;
+console.log("You've selected", selectedRating);
+```
+
+If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+
+
+### Continued development
+
+Setting up the JavaScript was challenging for me again. Not knowing where to start or how to break it down, I asked ChatGPT for help. Of course, a lot of the code it used to create the functions didn't make sense to me, so it was important for me to learn to research and ask in-depth questions about why certain functions were used, and what their purpose was. Another resource I'd like to become more familiar with is w3schools.com. There, I found that you can practice simplified example problems of the bigger problems that arise in bigger projects like this one.
+
+
+### Useful resources
+
+- [ChatGPT](https://www.chatgpt.com) - I like how you can ask ChatGPT just about anything, and if you don't understand something, you can ask it to explain things further in detail.
+- [w3schools](https://www.w3schools.com) - This is a good resource to read and practice examples of code that you're unsure of.
+
+
+## Author
+
+- Frontend Mentor - [@Amsav23](https://www.frontendmentor.io/profile/Amsav23)

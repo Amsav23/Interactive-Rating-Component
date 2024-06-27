@@ -22,10 +22,10 @@ let selectedRating = "";
 submitButton.addEventListener("click", () => {
     console.log("submit");
     if (selectedRating !="") {
-      // I want to show the thank-you-state div
+      // I want to SHOW the thank-you-state div
       // That means REMOVE the hidden class
       thankYouState.classList.toggle("hidden");
-      // I need the rating-state div to be hidden
+      // I need the rating-state div to be hidden (add the hidden class)
       ratingState.classList.add("hidden");
       // I want to create an alert message if a user submits without selecting a number
     } else {
